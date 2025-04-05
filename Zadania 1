@@ -1,0 +1,9 @@
+1. Napisz program przeliczający temperaturę wyrażoną w st Celsiusza na temperaturę wyrażoną w skali Fahreheita
+
+2. Napisz program czy liczba 1 jest podzielna przez b. Program musi pobrać od użytkownika dwie liczby całkowite a,b. Jako wynik pracy programow ma wydrukować informację mówiącą o tym, czy liczba a jest podzielna przez liczbę b (jeden z tekstów A JEST PODZIELNE PRZEZ B lub A NIE JEST PODZIELNE PRZEZ B)
+
+3. Napisz program SORT 2 pobierający od użytkownika dwie liczby i drukujacy na ekranie obie liczby w porządku rosnącym.
+
+4. Napisz program generujący ciąg n początkowych liczb Fibonacciego.
+
+5. Zaprojektować i zaimplementować funkcję w dowolnym języku realizującą następujące zadanie. Wyświetlanie na standardowym wyjściu wartości maksymalnej z trzech licz a, b, b pobranych ze standardowego strumienia wejściowego (wyszukiwanie liniowe).
