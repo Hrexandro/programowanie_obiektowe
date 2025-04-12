@@ -1,6 +1,72 @@
 1. Napisz program przeliczający temperaturę wyrażoną w st Celsiusza na temperaturę wyrażoną w skali Fahreheita
 
+using System;
+
+namespace ConsoleApplication1
+{
+    class Program{
+        static void handleInput(){
+            double a, output;
+            string unit;
+            Console.Write("Podaj jednostkę (F lub C)");
+            unit = Console.ReadLine().ToUpper();
+            
+            while (unit != "F" && unit != "C"){
+                Console.WriteLine("Wystąpił błąd, wpisz 'F' lub 'C'");
+                unit = Console.ReadLine().ToUpper();
+            }
+            
+            Console.Write("Podaj wartość temperatury ");
+            if (!double.TryParse(Console.ReadLine(), out a))
+            {
+                Console.WriteLine("Nieprawidłowa wartość temperatury.");
+                return;
+            }
+            
+            if (unit == "F"){
+                output = (a - 32) * 5/9;
+                Console.WriteLine($"Temperatura wynosi {output} °C");
+            }
+            else if (unit == "C"){
+                output = (a * 9/5) + 32;
+                Console.WriteLine($"Temperatura wynosi {output} °F");
+            }
+
+            Console.ReadKey(true);
+        }
+        static void Main(string[] args)
+        {
+
+            handleInput();
+        }
+    }
+}
+
 2. Napisz program czy liczba 1 jest podzielna przez b. Program musi pobrać od użytkownika dwie liczby całkowite a,b. Jako wynik pracy programow ma wydrukować informację mówiącą o tym, czy liczba a jest podzielna przez liczbę b (jeden z tekstów A JEST PODZIELNE PRZEZ B lub A NIE JEST PODZIELNE PRZEZ B)
+
+using System;
+
+namespace ConsoleApplication1
+{
+    class Program{
+        static void Main(string[] args)
+        {
+            int a, b;
+            Console.Write("Podaj a=");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Podaj b=");  
+            b = Convert.ToInt32(Console.ReadLine());
+            
+            if (a%b==0){
+                Console.WriteLine("A JEST PODZIELNE PRZEZ B");
+            } else {
+                Console.WriteLine("A NIE JEST PODZIELNE PRZEZ B");
+            }
+
+            Console.ReadKey(true);
+        }
+    }
+}
 
 3. Napisz program SORT 2 pobierający od użytkownika dwie liczby i drukujacy na ekranie obie liczby w porządku rosnącym.
 
