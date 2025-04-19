@@ -70,6 +70,30 @@ namespace ConsoleApplication1
 
 3. Napisz program SORT 2 pobierający od użytkownika dwie liczby i drukujacy na ekranie obie liczby w porządku rosnącym.
 
+using System;
+
+namespace ConsoleApplication1
+{
+    class Program{
+        static void Main(string[] args)
+        {
+            double a, b;
+            Console.Write("Podaj pierwszą liczbę ");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Podaj drugą liczbę ");  
+            b = Convert.ToDouble(Console.ReadLine());
+            
+            if (a>b){
+                Console.WriteLine(a + " " + b);
+            } else {
+                Console.WriteLine(b + " " + a);
+            }
+
+            Console.ReadKey(true);
+        }
+    }
+}
+
 4. Napisz program generujący ciąg n początkowych liczb Fibonacciego.
 
 5. Zaprojektować i zaimplementować funkcję w dowolnym języku realizującą następujące zadanie. Wyświetlanie na standardowym wyjściu wartości maksymalnej z trzech licz a, b, b pobranych ze standardowego strumienia wejściowego (wyszukiwanie liniowe).
