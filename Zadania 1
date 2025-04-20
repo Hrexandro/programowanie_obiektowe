@@ -96,4 +96,66 @@ namespace ConsoleApplication1
 
 4. Napisz program generujący ciąg n początkowych liczb Fibonacciego.
 
-5. Zaprojektować i zaimplementować funkcję w dowolnym języku realizującą następujące zadanie. Wyświetlanie na standardowym wyjściu wartości maksymalnej z trzech licz a, b, b pobranych ze standardowego strumienia wejściowego (wyszukiwanie liniowe).
+using System;
+
+namespace ConsoleApplication1
+{
+    class Program{
+        static void Main(string[] args)
+        {
+            int n, i, previous, current;
+            Console.Write("Witaj w programie generującym ciąg n początkowych liczb Fibonacciego, podaj n: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            i = 0;
+            previous = 1;
+            current = 1;
+            while (i<n){
+                if (i == 0){
+                  Console.Write(0);
+                } else if(i == 1){
+                  Console.Write(1);
+                } else {
+                  int result = current + previous;
+                  Console.Write(current);
+                  previous = current;
+                  current = result;
+                }
+                Console.Write(" ");
+                i++;
+            }
+
+            Console.ReadKey(true);
+        }
+    }
+}
+
+5. Zaprojektować i zaimplementować funkcję w dowolnym języku realizującą następujące zadanie.
+Wyświetlanie na standardowym wyjściu wartości maksymalnej z trzech licz a, b, c
+pobranych ze standardowego strumienia wejściowego (wyszukiwanie liniowe).
+
+using System;
+
+namespace ConsoleApplication1
+{
+    class Program{
+        static void Main(string[] args)
+        {
+            double a, b, c;
+            Console.Write("Podaj pierwszą liczbę ");
+            a = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Podaj drugą liczbę ");  
+            b = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Podaj trzecią liczbę ");  
+            c = Convert.ToDouble(Console.ReadLine());
+            double[] numbers = {a, b, c};
+            double largest = a;
+            for (int i = 1; i < 3; i++) {
+                if (numbers[i]>largest){
+                    largest = numbers[i];
+                }
+            }
+            Console.WriteLine(largest);  
+            Console.ReadKey(true);
+        }
+    }
+}
